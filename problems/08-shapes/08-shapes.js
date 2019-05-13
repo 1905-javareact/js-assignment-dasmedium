@@ -20,6 +20,48 @@ Example for printShape("Diamond", 5, "*");
  ***
   * 
 */
+
+// NOTE: For this excercise only "Triangle" is properly implemented.
+
 function printShape(shape, height, character) {
-  
+  // Printing the triangle
+  function getRow(height) {
+    let row = "";
+    for (i = 1; i <= height; i++) {
+      row += i === height ? character : character;
+      return row;
+    }
+  }
+  function printIt(height) {
+    for (let area = "", j = 1; j <= height; j++) {
+      area += getRow(j);
+      console.log(area);
+    }
+  }
+
+  // Printing the square
+  function makeSquare(height) {
+    for (i = 0; i < height; i++) {
+      let row = "";
+      let column = "";
+      for (j = 0; j < height; j++) {
+        return (row += character);
+      }
+      return (column += "\n");
+    }
+  }
+
+  switch (shape) {
+    case "Square":
+      makeSquare(height);
+      break;
+    case "Triangle":
+      printIt(height);
+    case "Diamond":
+      // code
+      break;
+    default:
+    // code
+  }
 }
+printShape("Square", 9, "J");
